@@ -1,13 +1,13 @@
 # **Swipe It!**
 
-**SWIPE IT!** is an iOS application of quiz game type (*the "Yes"/ "No" game*) inspired by a course of OpenClassRoom online education platform.
+**SWIPE IT!** is an iOS application of quiz game type (*the "Yes"/ "No" game*) inspired by a course of [OpenClassRoom](https://openclassrooms.com) online education platform.
 
 The main goal of this game is to give 10 right answers in 100 seconds (every question has the time limit of ten seconds).
 
 This application is responsive of iPhone/ iPad orientation (landscape & portrait) and adapted at all iOS mobile platforms.
 
-![](file:///Users/svetlanalesik/Desktop/SwipeIt_demo_01.gif)
-
+![](https://github.com/slesik/SwipeIt/blob/master/SwipeIt_demo.gif)
+  
 ## Play it
 
 * To start a new game you just have to tap a blue button *"New Game"* at the main screen.
