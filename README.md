@@ -25,4 +25,4 @@ This application is responsive on iPhone/iPad (landscape & portrait).
 
 ## Contact
 
-For all information and questions relative this project you can contact me at **slesik@student.42.fr** 
+For any information or questions relative to this project you can contact me at slesik@student.42.fr
