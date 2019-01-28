@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_5" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-VF-Op2">
-                                <rect key="frame" x="537.5" y="755.5" width="37" height="37"/>
+                                <rect key="frame" x="265.5" y="241.5" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="6FY-qj-G67"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="SJQ-zJ-Sf7"/>
@@ -32,10 +32,10 @@
                                 </constraints>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bh-nc-qZd" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="316" y="110" width="480" height="480"/>
+                                <rect key="frame" x="20" y="55" width="245" height="245"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se trouve donc le Marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnF-oa-97U">
-                                        <rect key="frame" x="8" y="8" width="464" height="464"/>
+                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
                                         <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                         </variation>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="rHd-Os-NYD">
-                                        <rect key="frame" x="204" y="400" width="72" height="72"/>
+                                        <rect key="frame" x="104.5" y="201" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rHd-Os-NYD" secondAttribute="height" multiplier="1:1" id="eOo-bi-Y9R"/>
                                             <constraint firstAttribute="width" constant="36" id="k4X-n0-Ecj">
@@ -53,7 +53,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za9-SA-czV">
-                                        <rect key="frame" x="30" y="10" width="420" height="15"/>
+                                        <rect key="frame" x="30" y="10" width="185" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="420" id="3qG-KX-Tn2"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="7dO-cF-eDF"/>
@@ -121,7 +121,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIPE IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-zi-IeX">
-                                <rect key="frame" x="0.0" y="20" width="1112" height="25"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="0.17224957191780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Wpp-ps-ZkO"/>
@@ -133,7 +133,7 @@
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <progressView verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" insetsLayoutMarginsFromSafeArea="NO" progressViewStyle="bar" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-8A-3pl">
-                                <rect key="frame" x="50" y="65" width="1012" height="21"/>
+                                <rect key="frame" x="50" y="35" width="468" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="70q-JD-4RS"/>
@@ -142,7 +142,7 @@
                                 <color key="trackTintColor" red="0.91246856561112566" green="0.92616917790495201" blue="0.88419120035126597" alpha="0.61520761986301364" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF4-aL-0NJ">
-                                <rect key="frame" x="536" y="55" width="40" height="40"/>
+                                <rect key="frame" x="264" y="25" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="19I-cN-xi1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xI4-Ha-xU9"/>
@@ -154,7 +154,7 @@
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIPE IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-in-c27">
-                                <rect key="frame" x="256" y="64" width="600" height="300"/>
+                                <rect key="frame" x="8" y="45" width="300" height="200"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="10p-KK-XAr"/>
@@ -192,7 +192,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-eM-4AF">
-                                <rect key="frame" x="236" y="574" width="640" height="240"/>
+                                <rect key="frame" x="315" y="125" width="0.0" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="CHd-MA-tkG">
                                         <variation key="heightClass=regular-widthClass=regular" constant="240"/>
@@ -214,7 +214,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tR-bK-CWW">
-                                <rect key="frame" x="140" y="694" width="832" height="100"/>
+                                <rect key="frame" x="149" y="230" width="270" height="70"/>
                                 <color key="backgroundColor" red="0.76065577224051562" green="0.86041436579719499" blue="1" alpha="0.76792594178082196" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="OI0-u4-So2"/>
@@ -222,6 +222,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="RKa-2m-r30"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="SjL-RL-3sb"/>
                                     <constraint firstAttribute="height" constant="80" id="YYb-An-tul"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="kNp-tP-McZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="oOv-cp-IDf"/>
                                     <constraint firstAttribute="height" constant="80" id="vrQ-sV-sUF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="yOL-zk-XNe"/>
@@ -237,6 +238,7 @@
                                         <exclude reference="RKa-2m-r30"/>
                                         <exclude reference="SjL-RL-3sb"/>
                                         <exclude reference="YYb-An-tul"/>
+                                        <exclude reference="kNp-tP-McZ"/>
                                         <exclude reference="oOv-cp-IDf"/>
                                         <exclude reference="yOL-zk-XNe"/>
                                     </mask>
@@ -259,6 +261,7 @@
                                     <mask key="constraints">
                                         <include reference="PHW-Dr-Xff"/>
                                         <include reference="RKa-2m-r30"/>
+                                        <include reference="kNp-tP-McZ"/>
                                         <exclude reference="vrQ-sV-sUF"/>
                                     </mask>
                                 </variation>
@@ -270,7 +273,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="GAME OVER " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-j8-iWk">
-                                <rect key="frame" x="216" y="600" width="680" height="100"/>
+                                <rect key="frame" x="290" y="55" width="141.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0jR-4O-1dT"/>
                                     <constraint firstAttribute="height" constant="50" id="Cul-qq-lNq">
@@ -311,7 +314,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-4s-GqD">
-                                <rect key="frame" x="236" y="265" width="640" height="200"/>
+                                <rect key="frame" x="134" y="127" width="300" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="60O-Ln-KC0"/>
                                     <constraint firstAttribute="height" constant="200" id="AQf-RZ-W9c"/>
@@ -346,7 +349,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-i1-ob9">
-                                <rect key="frame" x="469.5" y="710" width="173" height="80"/>
+                                <rect key="frame" x="441.5" y="55" width="86.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="OL2-OA-KaX"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Taq-2q-VQd"/>
@@ -377,7 +380,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXE-dc-hsF">
-                                <rect key="frame" x="256" y="242" width="600" height="350"/>
+                                <rect key="frame" x="312" y="25" width="253" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="9Wq-PB-lxZ"/>
                                     <constraint firstAttribute="height" constant="200" id="Uxj-y0-P4V"/>
@@ -470,6 +473,7 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="20" id="H5j-Iv-buY"/>
                             <constraint firstItem="7bh-nc-qZd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hio-mI-QT8"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="20" id="I4K-BC-TgX"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7w-L2-AbM"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="20" id="IHg-l4-fQ8"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J9i-FU-fYB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="45" id="KMg-ef-of1"/>
@@ -580,6 +584,7 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" id="vbk-rh-TJZ"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" id="vcK-MZ-8CR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="200" id="w7f-cj-qIC"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wZB-xa-zdq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="150" id="xEN-MF-Quc"/>
                             <constraint firstItem="7bh-nc-qZd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xaT-gp-Kxc"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="width" secondItem="2BF-i1-ob9" secondAttribute="width" id="xhs-ug-0Oz"/>
@@ -621,15 +626,15 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="IHg-l4-fQ8"/>
                                 <exclude reference="abv-7H-bN5"/>
                                 <exclude reference="bdC-gk-CJO"/>
-                                <exclude reference="1Uf-uQ-7dW"/>
-                                <exclude reference="KTt-sg-ECQ"/>
-                                <exclude reference="Yfb-Im-Kr7"/>
-                                <exclude reference="oUy-Xu-cku"/>
                                 <exclude reference="BRv-l3-3bG"/>
                                 <exclude reference="Hio-mI-QT8"/>
                                 <exclude reference="sAt-dk-YXW"/>
                                 <exclude reference="xaT-gp-Kxc"/>
                                 <exclude reference="ysG-5C-1V3"/>
+                                <exclude reference="1Uf-uQ-7dW"/>
+                                <exclude reference="KTt-sg-ECQ"/>
+                                <exclude reference="Yfb-Im-Kr7"/>
+                                <exclude reference="oUy-Xu-cku"/>
                                 <exclude reference="8BV-fh-djY"/>
                                 <exclude reference="RZZ-Co-hcx"/>
                                 <exclude reference="apV-29-8MJ"/>
@@ -637,6 +642,7 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="mnX-lq-BWE"/>
                                 <exclude reference="nat-BQ-oWY"/>
                                 <exclude reference="pFa-AX-zba"/>
+                                <exclude reference="j3x-vQ-4M4"/>
                                 <exclude reference="1JI-VQ-NYm"/>
                                 <exclude reference="3aX-0h-9Fr"/>
                                 <exclude reference="4GF-57-AKn"/>
@@ -645,6 +651,7 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="D3o-IX-kTE"/>
                                 <exclude reference="DdN-3E-FLZ"/>
                                 <exclude reference="Fw3-h8-kao"/>
+                                <exclude reference="I7w-L2-AbM"/>
                                 <exclude reference="MRw-8T-zIz"/>
                                 <exclude reference="OjA-3K-1Z4"/>
                                 <exclude reference="WEF-nd-4Pe"/>
@@ -660,6 +667,7 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="pRE-rM-bAa"/>
                                 <exclude reference="tS6-Pj-VKu"/>
                                 <exclude reference="tTk-ub-r7V"/>
+                                <exclude reference="wZB-xa-zdq"/>
                                 <exclude reference="xhs-ug-0Oz"/>
                                 <exclude reference="yjQ-oH-Vt6"/>
                                 <exclude reference="9Je-Fc-Yjr"/>
@@ -684,7 +692,6 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="Rdc-Ag-ZuV"/>
                                 <exclude reference="adA-r3-FeT"/>
                                 <exclude reference="ku7-iS-Nbd"/>
-                                <exclude reference="j3x-vQ-4M4"/>
                                 <exclude reference="2jd-kt-6lQ"/>
                                 <exclude reference="EGo-9I-5Jd"/>
                                 <exclude reference="e57-A3-rcn"/>
@@ -738,17 +745,18 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="abv-7H-bN5"/>
                                 <exclude reference="bdC-gk-CJO"/>
                                 <exclude reference="o2X-Pg-QaX"/>
-                                <exclude reference="1Uf-uQ-7dW"/>
-                                <include reference="KTt-sg-ECQ"/>
-                                <exclude reference="Yfb-Im-Kr7"/>
-                                <include reference="oUy-Xu-cku"/>
-                                <exclude reference="vCe-bJ-XNl"/>
                                 <exclude reference="DL5-za-fhs"/>
                                 <include reference="Hio-mI-QT8"/>
                                 <exclude reference="Usx-uQ-tyv"/>
                                 <exclude reference="sAt-dk-YXW"/>
                                 <include reference="xaT-gp-Kxc"/>
                                 <exclude reference="ysG-5C-1V3"/>
+                                <exclude reference="1Uf-uQ-7dW"/>
+                                <include reference="KTt-sg-ECQ"/>
+                                <exclude reference="Yfb-Im-Kr7"/>
+                                <include reference="oUy-Xu-cku"/>
+                                <exclude reference="vCe-bJ-XNl"/>
+                                <include reference="j3x-vQ-4M4"/>
                                 <exclude reference="9O7-gc-BHv"/>
                                 <include reference="D3o-IX-kTE"/>
                                 <exclude reference="DdN-3E-FLZ"/>
@@ -777,7 +785,6 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="O96-fY-T2s"/>
                                 <exclude reference="adA-r3-FeT"/>
                                 <exclude reference="cbr-yt-aPY"/>
-                                <include reference="j3x-vQ-4M4"/>
                                 <include reference="2jd-kt-6lQ"/>
                                 <exclude reference="EGo-9I-5Jd"/>
                                 <exclude reference="GO8-u3-b5X"/>
@@ -834,15 +841,17 @@ Swipe Left or Right before time runs out !</string>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="5VH-yP-e80"/>
-                                <include reference="kPd-BX-3lR"/>
+                                <exclude reference="kPd-BX-3lR"/>
                                 <include reference="spC-9y-fZ1"/>
                                 <include reference="BRv-l3-3bG"/>
                                 <exclude reference="Hio-mI-QT8"/>
                                 <include reference="4GF-57-AKn"/>
                                 <exclude reference="CT3-5M-R4z"/>
+                                <include reference="I7w-L2-AbM"/>
                                 <include reference="OjA-3K-1Z4"/>
                                 <exclude reference="WEF-nd-4Pe"/>
                                 <exclude reference="YSu-ku-iNh"/>
+                                <include reference="wZB-xa-zdq"/>
                                 <include reference="5vb-D4-9Wy"/>
                                 <exclude reference="I4K-BC-TgX"/>
                                 <include reference="MZI-Gq-bPG"/>
