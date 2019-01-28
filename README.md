@@ -14,10 +14,10 @@ This application is responsive on iPhone/iPad (landscape & portrait).
 * After launching the game you'll have **10 seconds** to answer a question in the center of the screen.
 * To answer, you just need to swipe the central square with the question to the left for **"False"** and to the right to say **"True"**
 <p align="center">
-<---------------❌NO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; YES ✅ --------------->
+<---------------❌FALSE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TRUE ✅ --------------->
 </p>
 
-* when you anwsered, you'll see the quote which will tell you if you were right or wrong. 
+* When you anwsered, you'll see the quote which will tell you if you were right or wrong. 
 * In the middle of the screen you'll see your *score* (your total of right answers).
 * If you didn't answer in ten secondes, the game will take it like a wrong answer.
 * At the end you will be graduate according to your final score.
