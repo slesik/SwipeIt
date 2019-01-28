@@ -1,25 +1,25 @@
 # **Swipe It!**
 
-**SWIPE IT!** is an iOS application of quiz game type (*the "Yes"/ "No" game*) inspired by a course of the [OpenClassRoom](https://openclassrooms.com) online education platform.
+**SWIPE IT!** is an iOS quiz application (*a "True"/ "False" type game*) inspired by an online course from [OpenClassrooms](https://openclassrooms.com) online education platform.
 
-The main goal of this game is to give 10 right answers in 100 seconds (every question has the time limit of ten seconds).
+The main goal of this game is to get 10 right answers in less than 100 seconds (every question has a time limit of 10 seconds).
 
-This application is responsive of iPhone/ iPad orientation (landscape & portrait) and adapted at all iOS mobile platforms.
+This application is responsive on iPhone/iPad (landscape & portrait).
 
 ![](https://github.com/slesik/SwipeIt/blob/master/SwipeIt_demo.gif)
   
 ## Play it
 
-* To start a new game you just have to tap a blue button *"New Game"* at the main screen.
+* To start a new game you just have to tap the blue button *"New Game"* on the main screen.
 * After launching the game you'll have **10 seconds** to answer a question in the center of the screen.
-* To answer, you should swipe a central square to the left for **"NO"** and to the right to say **"YES"**
+* To answer, you just need to swipe the central square with the question to the left for **"False"** and to the right to say **"True"**
 <p align="center">
-<---------------❌NO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; YES✅ --------------->
+<---------------❌NO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; YES ✅ --------------->
 </p>
 
-* After choosing your swipe, you'll see the quote which will tell you if you were right or wrong. 
-* In the middle of the screen you'll see your *score* (all your right answers).
-* If you didn't answer in ten minutes, the game will take it like a wrong answer.
+* when you anwsered, you'll see the quote which will tell you if you were right or wrong. 
+* In the middle of the screen you'll see your *score* (your total of right answers).
+* If you didn't answer in ten secondes, the game will take it like a wrong answer.
 * At the end you will be graduate according to your final score.
 
 
