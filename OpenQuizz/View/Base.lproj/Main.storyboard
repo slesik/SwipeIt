@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-VF-Op2">
-                                <rect key="frame" x="493.5" y="689.5" width="37" height="37"/>
+                                <rect key="frame" x="537.5" y="755.5" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="6FY-qj-G67"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="SJQ-zJ-Sf7"/>
@@ -32,7 +32,7 @@
                                 </constraints>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bh-nc-qZd" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="272" y="110" width="480" height="480"/>
+                                <rect key="frame" x="316" y="110" width="480" height="480"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se trouve donc le Marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnF-oa-97U">
                                         <rect key="frame" x="8" y="8" width="464" height="464"/>
@@ -87,6 +87,7 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="480"/>
                                     </constraint>
                                     <constraint firstItem="rHd-Os-NYD" firstAttribute="centerX" secondItem="7bh-nc-qZd" secondAttribute="centerX" id="Ay4-Ee-xa3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="Mao-4O-IF4"/>
                                     <constraint firstItem="OnF-oa-97U" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" constant="8" id="RTV-oG-hlA"/>
                                     <constraint firstItem="OnF-oa-97U" firstAttribute="leading" secondItem="7bh-nc-qZd" secondAttribute="leading" constant="8" id="Wi9-3G-mqw"/>
                                     <constraint firstItem="za9-SA-czV" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" constant="10" id="YF8-dl-S1s"/>
@@ -95,49 +96,32 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="OnF-oa-97U" secondAttribute="trailing" constant="8" id="h5X-ax-IEx"/>
+                                    <constraint firstAttribute="height" constant="245" id="jgD-ME-OUA"/>
                                     <constraint firstAttribute="bottom" secondItem="OnF-oa-97U" secondAttribute="bottom" constant="8" id="pJF-4P-aUu"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="za9-SA-czV" secondAttribute="trailing" constant="30" id="sNw-Re-rJR">
                                         <variation key="heightClass=compact" constant="20" symbolic="YES"/>
                                     </constraint>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mao-4O-IF4"/>
+                                        <exclude reference="jgD-ME-OUA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="AMo-di-03h"/>
+                                        <include reference="Mao-4O-IF4"/>
+                                        <include reference="jgD-ME-OUA"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="icon" destination="rHd-Os-NYD" id="MTH-8U-Z0u"/>
                                     <outlet property="label" destination="OnF-oa-97U" id="rSg-UZ-X28"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-i1-ob9">
-                                <rect key="frame" x="425.5" y="710" width="173" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="OL2-OA-KaX"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Taq-2q-VQd"/>
-                                    <constraint firstAttribute="height" constant="60" id="wAa-M5-Lbs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Taq-2q-VQd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="OL2-OA-KaX"/>
-                                        <exclude reference="wAa-M5-Lbs"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="Taq-2q-VQd"/>
-                                        <exclude reference="wAa-M5-Lbs"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="80"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIPE IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-zi-IeX">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="25"/>
+                                <rect key="frame" x="0.0" y="20" width="1112" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="0.17224957191780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Wpp-ps-ZkO"/>
@@ -149,7 +133,7 @@
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <progressView verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" insetsLayoutMarginsFromSafeArea="NO" progressViewStyle="bar" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-8A-3pl">
-                                <rect key="frame" x="50" y="65" width="924" height="21"/>
+                                <rect key="frame" x="50" y="65" width="1012" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="70q-JD-4RS"/>
@@ -158,7 +142,7 @@
                                 <color key="trackTintColor" red="0.91246856561112566" green="0.92616917790495201" blue="0.88419120035126597" alpha="0.61520761986301364" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF4-aL-0NJ">
-                                <rect key="frame" x="492" y="55" width="40" height="40"/>
+                                <rect key="frame" x="536" y="55" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="19I-cN-xi1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xI4-Ha-xU9"/>
@@ -169,42 +153,8 @@
                                 <color key="shadowColor" red="0.3988962587971373" green="0.34408603498280221" blue="0.2431522378915241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXE-dc-hsF">
-                                <rect key="frame" x="212" y="209" width="600" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="9Wq-PB-lxZ"/>
-                                    <constraint firstAttribute="height" constant="200" id="Uxj-y0-P4V"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="pS4-4e-IXH"/>
-                                    <constraint firstAttribute="height" constant="250" id="vYU-HO-FEG"/>
-                                </constraints>
-                                <string key="text">A simple question in the middle, one option on left and another on right. 
-Swipe Left or Right before time runs out !</string>
-                                <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="26"/>
-                                <color key="textColor" red="0.33992323856580237" green="0.38931750779635305" blue="0.46354991500147713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9Wq-PB-lxZ"/>
-                                        <exclude reference="Uxj-y0-P4V"/>
-                                        <exclude reference="pS4-4e-IXH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Uxj-y0-P4V"/>
-                                        <exclude reference="vYU-HO-FEG"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="9Wq-PB-lxZ"/>
-                                        <include reference="pS4-4e-IXH"/>
-                                        <exclude reference="vYU-HO-FEG"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIPE IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-in-c27">
-                                <rect key="frame" x="212" y="64" width="600" height="300"/>
+                                <rect key="frame" x="256" y="64" width="600" height="300"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="10p-KK-XAr"/>
@@ -242,7 +192,7 @@ Swipe Left or Right before time runs out !</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-eM-4AF">
-                                <rect key="frame" x="192" y="508" width="640" height="240"/>
+                                <rect key="frame" x="236" y="574" width="640" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="CHd-MA-tkG">
                                         <variation key="heightClass=regular-widthClass=regular" constant="240"/>
@@ -254,15 +204,22 @@ Swipe Left or Right before time runs out !</string>
                                 <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="lPX-qi-ho7"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="70"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tR-bK-CWW">
-                                <rect key="frame" x="140" y="628" width="744" height="100"/>
+                                <rect key="frame" x="140" y="694" width="832" height="100"/>
                                 <color key="backgroundColor" red="0.76065577224051562" green="0.86041436579719499" blue="1" alpha="0.76792594178082196" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="OI0-u4-So2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="PHW-Dr-Xff"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="RKa-2m-r30"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="SjL-RL-3sb"/>
                                     <constraint firstAttribute="height" constant="80" id="YYb-An-tul"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="oOv-cp-IDf"/>
@@ -276,6 +233,8 @@ Swipe Left or Right before time runs out !</string>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="PHW-Dr-Xff"/>
+                                        <exclude reference="RKa-2m-r30"/>
                                         <exclude reference="SjL-RL-3sb"/>
                                         <exclude reference="YYb-An-tul"/>
                                         <exclude reference="oOv-cp-IDf"/>
@@ -296,6 +255,13 @@ Swipe Left or Right before time runs out !</string>
                                         <exclude reference="vrQ-sV-sUF"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PHW-Dr-Xff"/>
+                                        <include reference="RKa-2m-r30"/>
+                                        <exclude reference="vrQ-sV-sUF"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="56"/>
                                 </variation>
@@ -303,8 +269,8 @@ Swipe Left or Right before time runs out !</string>
                                     <action selector="didTapeNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Kz-BD-MQp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-j8-iWk">
-                                <rect key="frame" x="172" y="600" width="680" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="GAME OVER " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-j8-iWk">
+                                <rect key="frame" x="216" y="600" width="680" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0jR-4O-1dT"/>
                                     <constraint firstAttribute="height" constant="50" id="Cul-qq-lNq">
@@ -345,7 +311,7 @@ Swipe Left or Right before time runs out !</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-4s-GqD">
-                                <rect key="frame" x="192" y="265" width="640" height="200"/>
+                                <rect key="frame" x="236" y="265" width="640" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="60O-Ln-KC0"/>
                                     <constraint firstAttribute="height" constant="200" id="AQf-RZ-W9c"/>
@@ -379,13 +345,85 @@ Swipe Left or Right before time runs out !</string>
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-i1-ob9">
+                                <rect key="frame" x="469.5" y="710" width="173" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="OL2-OA-KaX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Taq-2q-VQd"/>
+                                    <constraint firstAttribute="height" constant="60" id="wAa-M5-Lbs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Taq-2q-VQd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="OL2-OA-KaX"/>
+                                        <exclude reference="wAa-M5-Lbs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Taq-2q-VQd"/>
+                                        <exclude reference="wAa-M5-Lbs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="80"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXE-dc-hsF">
+                                <rect key="frame" x="256" y="242" width="600" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="9Wq-PB-lxZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="Uxj-y0-P4V"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="pS4-4e-IXH"/>
+                                    <constraint firstAttribute="height" constant="250" id="vYU-HO-FEG"/>
+                                </constraints>
+                                <string key="text">A simple question in the middle, one option on left and another on right. 
+Swipe Left or Right before time runs out !</string>
+                                <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="26"/>
+                                <color key="textColor" red="0.33992323856580237" green="0.38931750779635305" blue="0.46354991500147713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Wq-PB-lxZ"/>
+                                        <exclude reference="Uxj-y0-P4V"/>
+                                        <exclude reference="pS4-4e-IXH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Uxj-y0-P4V"/>
+                                        <exclude reference="vYU-HO-FEG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="9Wq-PB-lxZ"/>
+                                        <include reference="pS4-4e-IXH"/>
+                                        <exclude reference="vYU-HO-FEG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="NightStillComes" family="Night Still Comes" pointSize="50"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.41960784309999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gXE-dc-hsF" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="20" id="0zs-AR-ie4"/>
+                            <constraint firstItem="gXE-dc-hsF" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="20" id="0zs-AR-ie4">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="top" secondItem="7r2-4s-GqD" secondAttribute="bottom" constant="48" id="1JI-VQ-NYm"/>
                             <constraint firstItem="mdU-8A-3pl" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="12" id="1Uf-uQ-7dW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gXE-dc-hsF" secondAttribute="trailing" constant="20" id="2gH-zS-D5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gXE-dc-hsF" secondAttribute="trailing" constant="20" id="2gH-zS-D5C">
+                                <variation key="heightClass=compact-widthClass=compact" constant="3"/>
+                            </constraint>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" id="2jd-kt-6lQ">
                                 <variation key="heightClass=compact" constant="7"/>
                             </constraint>
@@ -393,7 +431,9 @@ Swipe Left or Right before time runs out !</string>
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="top" secondItem="7r2-4s-GqD" secondAttribute="bottom" constant="90" id="3aX-0h-9Fr"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4GF-57-AKn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="170" id="5VH-yP-e80"/>
+                            <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="8" symbolic="YES" id="5vb-D4-9Wy"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="20" id="6sa-vp-LKy"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7FQ-H8-zDi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BF-i1-ob9" secondAttribute="trailing" constant="20" id="84q-XT-mXy"/>
@@ -407,11 +447,15 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="20" id="9O7-gc-BHv"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="top" secondItem="5Et-j8-iWk" secondAttribute="bottom" constant="10" id="Acg-4h-dZV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BF-i1-ob9" secondAttribute="trailing" constant="20" id="BDz-zz-2jo"/>
+                            <constraint firstItem="7bh-nc-qZd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BRv-l3-3bG"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bu3-vy-gcc"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="trailing" id="Buu-UH-GPi">
                                 <variation key="heightClass=compact" constant="12"/>
                             </constraint>
-                            <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="D3o-IX-kTE"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CT3-5M-R4z"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="D3o-IX-kTE">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Et-j8-iWk" secondAttribute="trailing" id="DDP-H3-n1I">
                                 <variation key="heightClass=compact" constant="8" symbolic="YES"/>
                             </constraint>
@@ -421,11 +465,14 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="VF4-aL-0NJ" firstAttribute="centerX" secondItem="mdU-8A-3pl" secondAttribute="centerX" id="E7w-iX-CpH"/>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7bh-nc-qZd" secondAttribute="trailing" constant="8" symbolic="YES" id="EGo-9I-5Jd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="20" id="EIG-Df-R8I"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="top" secondItem="2BF-i1-ob9" secondAttribute="bottom" constant="16" id="Fw3-h8-kao"/>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="top" secondItem="gXE-dc-hsF" secondAttribute="bottom" constant="25" id="GO8-u3-b5X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="20" id="H5j-Iv-buY"/>
                             <constraint firstItem="7bh-nc-qZd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hio-mI-QT8"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="20" id="I4K-BC-TgX"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="20" id="IHg-l4-fQ8"/>
+                            <constraint firstItem="gXE-dc-hsF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J9i-FU-fYB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="45" id="KMg-ef-of1"/>
                             <constraint firstItem="mdU-8A-3pl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KTt-sg-ECQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="150" id="LII-z2-7AB"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="19" id="LML-CV-GBe"/>
@@ -435,15 +482,21 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lea-ug-Cqt"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="trailing" id="MJw-f7-0u2"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="MRw-8T-zIz"/>
+                            <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="trailing" constant="10" id="MZI-Gq-bPG"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" id="Mb6-fi-MIk">
                                 <variation key="heightClass=compact" constant="84"/>
                             </constraint>
                             <constraint firstItem="XeO-zi-IeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MrR-nf-SQe"/>
-                            <constraint firstItem="gXE-dc-hsF" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="20" id="NNz-iR-ryP"/>
+                            <constraint firstItem="2BF-i1-ob9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MzE-zW-jIs"/>
+                            <constraint firstItem="gXE-dc-hsF" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="20" id="NNz-iR-ryP">
+                                <variation key="heightClass=compact-widthClass=compact" constant="4"/>
+                            </constraint>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nbd-1q-GWk"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="10" id="O96-fY-T2s"/>
                             <constraint firstItem="XeO-zi-IeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OCT-yp-Vfw"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OjA-3K-1Z4"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" id="OyR-UT-Enj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7r2-4s-GqD" secondAttribute="trailing" constant="10" id="Q2f-Qs-DUm"/>
                             <constraint firstItem="7r2-4s-GqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q6I-1a-Ncz"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="QS5-Rs-REp"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qbx-v8-CX5"/>
@@ -451,15 +504,21 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="7r2-4s-GqD" firstAttribute="top" secondItem="VF4-aL-0NJ" secondAttribute="bottom" constant="170" id="RZZ-Co-hcx"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ra8-Xz-ddO"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rdc-Ag-ZuV"/>
+                            <constraint firstItem="5Et-j8-iWk" firstAttribute="top" secondItem="7r2-4s-GqD" secondAttribute="bottom" constant="47" id="Sob-pg-K4o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="233" id="UCu-31-bqL"/>
+                            <constraint firstItem="5Et-j8-iWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFD-gd-Fp0"/>
                             <constraint firstAttribute="bottom" secondItem="5Et-j8-iWk" secondAttribute="bottom" constant="245" id="UZg-A6-jaY"/>
                             <constraint firstItem="7bh-nc-qZd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Usx-uQ-tyv"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WEF-nd-4Pe"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Et-j8-iWk" secondAttribute="trailing" id="X9j-NC-oHl">
                                 <variation key="heightClass=compact" constant="8" symbolic="YES"/>
                             </constraint>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YSu-ku-iNh"/>
                             <constraint firstItem="mdU-8A-3pl" firstAttribute="top" secondItem="XeO-zi-IeX" secondAttribute="bottom" constant="15" id="Yfb-Im-Kr7"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="bottom" secondItem="7bh-nc-qZd" secondAttribute="bottom" id="ZPc-gH-lAq"/>
-                            <constraint firstItem="5Et-j8-iWk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A3S-in-c27" secondAttribute="trailing" constant="8" symbolic="YES" id="ZrR-NI-UG0"/>
+                            <constraint firstItem="5Et-j8-iWk" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="8" symbolic="YES" id="ZrR-NI-UG0">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-18"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CpK-eM-4AF" secondAttribute="trailing" symbolic="YES" id="aZ0-RS-Kzf"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="abv-7H-bN5"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="leading" secondItem="A3S-in-c27" secondAttribute="trailing" constant="20" id="adA-r3-FeT"/>
@@ -484,17 +543,23 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" id="hK5-Hx-hrT"/>
                             <constraint firstItem="7r2-4s-GqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hu2-ak-pDy"/>
                             <constraint firstItem="7r2-4s-GqD" firstAttribute="top" secondItem="5Et-j8-iWk" secondAttribute="bottom" constant="22" id="iAq-77-TeQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BF-i1-ob9" secondAttribute="trailing" constant="100" id="iB6-h1-Toq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JQt-VF-Op2" secondAttribute="bottom" constant="41.5" id="iCs-1q-cFC"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="height" relation="greaterThanOrEqual" secondItem="5Et-j8-iWk" secondAttribute="height" id="iFI-gD-h5Z"/>
                             <constraint firstItem="VF4-aL-0NJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j3x-vQ-4M4"/>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="leading" secondItem="5Et-j8-iWk" secondAttribute="leading" id="jcX-Jk-JxH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="20" id="kN3-ax-wL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" id="kPd-BX-3lR">
+                                <variation key="heightClass=compact-widthClass=compact" constant="148"/>
+                            </constraint>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kQR-ZD-bI2"/>
                             <constraint firstItem="XeO-zi-IeX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kSz-UT-48v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CpK-eM-4AF" secondAttribute="bottom" constant="20" id="kpy-hZ-LyF"/>
                             <constraint firstItem="gXE-dc-hsF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ku7-iS-Nbd"/>
                             <constraint firstItem="CpK-eM-4AF" firstAttribute="leading" secondItem="7bh-nc-qZd" secondAttribute="trailing" constant="50" id="li7-Fh-kUA"/>
+                            <constraint firstItem="7r2-4s-GqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mnX-lq-BWE"/>
                             <constraint firstItem="2BF-i1-ob9" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="bottom" constant="64" id="n2e-EN-fPM"/>
+                            <constraint firstItem="3tR-bK-CWW" firstAttribute="top" secondItem="5Et-j8-iWk" secondAttribute="bottom" constant="64" id="nQV-rP-0F7"/>
                             <constraint firstItem="7r2-4s-GqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nat-BQ-oWY"/>
                             <constraint firstItem="A3S-in-c27" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o2X-Pg-QaX"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="top" secondItem="7bh-nc-qZd" secondAttribute="top" id="o37-cN-Vez"/>
@@ -507,6 +572,7 @@ Swipe Left or Right before time runs out !</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CpK-eM-4AF" secondAttribute="trailing" constant="20" id="raJ-sf-7it"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tR-bK-CWW" secondAttribute="trailing" constant="160" id="ruH-P1-kaG"/>
                             <constraint firstItem="7bh-nc-qZd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAt-dk-YXW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7bh-nc-qZd" secondAttribute="bottom" constant="20" id="spC-9y-fZ1"/>
                             <constraint firstItem="5Et-j8-iWk" firstAttribute="leading" secondItem="7bh-nc-qZd" secondAttribute="trailing" constant="20" id="ssl-JV-U9V"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="tS6-Pj-VKu"/>
                             <constraint firstItem="3tR-bK-CWW" firstAttribute="leading" secondItem="7bh-nc-qZd" secondAttribute="trailing" constant="100" id="tTk-ub-r7V"/>
@@ -532,28 +598,34 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="8rk-8t-Moa"/>
                                 <exclude reference="BDz-zz-2jo"/>
                                 <exclude reference="EIG-Df-R8I"/>
+                                <exclude reference="KMg-ef-of1"/>
                                 <exclude reference="LII-z2-7AB"/>
+                                <exclude reference="Q2f-Qs-DUm"/>
                                 <exclude reference="UCu-31-bqL"/>
                                 <exclude reference="aZ0-RS-Kzf"/>
                                 <exclude reference="bVy-pT-PDa"/>
                                 <exclude reference="bm4-3d-vpe"/>
                                 <exclude reference="f6T-gH-d7K"/>
                                 <exclude reference="f7i-j4-gry"/>
+                                <exclude reference="iB6-h1-Toq"/>
                                 <exclude reference="kN3-ax-wL5"/>
+                                <exclude reference="kPd-BX-3lR"/>
                                 <exclude reference="oIj-HM-7Nk"/>
                                 <exclude reference="raJ-sf-7it"/>
                                 <exclude reference="ruH-P1-kaG"/>
+                                <exclude reference="spC-9y-fZ1"/>
                                 <exclude reference="w7f-cj-qIC"/>
                                 <exclude reference="xEN-MF-Quc"/>
-                                <exclude reference="1Uf-uQ-7dW"/>
-                                <exclude reference="KTt-sg-ECQ"/>
-                                <exclude reference="Yfb-Im-Kr7"/>
-                                <exclude reference="oUy-Xu-cku"/>
                                 <exclude reference="32B-hK-Tfl"/>
                                 <exclude reference="6sa-vp-LKy"/>
                                 <exclude reference="IHg-l4-fQ8"/>
                                 <exclude reference="abv-7H-bN5"/>
                                 <exclude reference="bdC-gk-CJO"/>
+                                <exclude reference="1Uf-uQ-7dW"/>
+                                <exclude reference="KTt-sg-ECQ"/>
+                                <exclude reference="Yfb-Im-Kr7"/>
+                                <exclude reference="oUy-Xu-cku"/>
+                                <exclude reference="BRv-l3-3bG"/>
                                 <exclude reference="Hio-mI-QT8"/>
                                 <exclude reference="sAt-dk-YXW"/>
                                 <exclude reference="xaT-gp-Kxc"/>
@@ -562,39 +634,71 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="RZZ-Co-hcx"/>
                                 <exclude reference="apV-29-8MJ"/>
                                 <exclude reference="hu2-ak-pDy"/>
+                                <exclude reference="mnX-lq-BWE"/>
                                 <exclude reference="nat-BQ-oWY"/>
                                 <exclude reference="pFa-AX-zba"/>
-                                <exclude reference="0zs-AR-ie4"/>
-                                <exclude reference="7FQ-H8-zDi"/>
-                                <exclude reference="99m-oQ-zgL"/>
-                                <exclude reference="NNz-iR-ryP"/>
-                                <exclude reference="O96-fY-T2s"/>
-                                <exclude reference="Rdc-Ag-ZuV"/>
-                                <exclude reference="adA-r3-FeT"/>
-                                <exclude reference="ku7-iS-Nbd"/>
-                                <exclude reference="j3x-vQ-4M4"/>
+                                <exclude reference="1JI-VQ-NYm"/>
+                                <exclude reference="3aX-0h-9Fr"/>
+                                <exclude reference="4GF-57-AKn"/>
+                                <exclude reference="9O7-gc-BHv"/>
+                                <exclude reference="CT3-5M-R4z"/>
+                                <exclude reference="D3o-IX-kTE"/>
+                                <exclude reference="DdN-3E-FLZ"/>
+                                <exclude reference="Fw3-h8-kao"/>
+                                <exclude reference="MRw-8T-zIz"/>
+                                <exclude reference="OjA-3K-1Z4"/>
+                                <exclude reference="WEF-nd-4Pe"/>
+                                <exclude reference="YSu-ku-iNh"/>
+                                <exclude reference="ZPc-gH-lAq"/>
+                                <exclude reference="bUy-sR-VhJ"/>
+                                <exclude reference="byW-gi-iBk"/>
+                                <exclude reference="dtU-aC-8dW"/>
+                                <exclude reference="fhf-ao-SxW"/>
+                                <exclude reference="gVu-IK-nj4"/>
+                                <exclude reference="gll-oV-g0e"/>
+                                <exclude reference="nQV-rP-0F7"/>
+                                <exclude reference="pRE-rM-bAa"/>
+                                <exclude reference="tS6-Pj-VKu"/>
+                                <exclude reference="tTk-ub-r7V"/>
+                                <exclude reference="xhs-ug-0Oz"/>
+                                <exclude reference="yjQ-oH-Vt6"/>
                                 <exclude reference="9Je-Fc-Yjr"/>
                                 <exclude reference="Bu3-vy-gcc"/>
                                 <exclude reference="LRF-T4-OGQ"/>
                                 <exclude reference="Mb6-fi-MIk"/>
                                 <exclude reference="QS5-Rs-REp"/>
                                 <exclude reference="Ra8-Xz-ddO"/>
+                                <exclude reference="Sob-pg-K4o"/>
+                                <exclude reference="UFD-gd-Fp0"/>
                                 <exclude reference="ZrR-NI-UG0"/>
                                 <exclude reference="o37-cN-Vez"/>
                                 <exclude reference="ssl-JV-U9V"/>
                                 <exclude reference="vcK-MZ-8CR"/>
                                 <exclude reference="yhn-Un-GRe"/>
+                                <exclude reference="0zs-AR-ie4"/>
+                                <exclude reference="7FQ-H8-zDi"/>
+                                <exclude reference="99m-oQ-zgL"/>
+                                <exclude reference="J9i-FU-fYB"/>
+                                <exclude reference="NNz-iR-ryP"/>
+                                <exclude reference="O96-fY-T2s"/>
+                                <exclude reference="Rdc-Ag-ZuV"/>
+                                <exclude reference="adA-r3-FeT"/>
+                                <exclude reference="ku7-iS-Nbd"/>
+                                <exclude reference="j3x-vQ-4M4"/>
                                 <exclude reference="2jd-kt-6lQ"/>
                                 <exclude reference="EGo-9I-5Jd"/>
                                 <exclude reference="e57-A3-rcn"/>
                                 <exclude reference="jcX-Jk-JxH"/>
                                 <exclude reference="li7-Fh-kUA"/>
+                                <exclude reference="5vb-D4-9Wy"/>
                                 <exclude reference="9K5-LE-n4z"/>
                                 <exclude reference="Acg-4h-dZV"/>
                                 <exclude reference="Buu-UH-GPi"/>
                                 <exclude reference="DDP-H3-n1I"/>
                                 <exclude reference="I4K-BC-TgX"/>
                                 <exclude reference="MJw-f7-0u2"/>
+                                <exclude reference="MZI-Gq-bPG"/>
+                                <exclude reference="MzE-zW-jIs"/>
                                 <exclude reference="OyR-UT-Enj"/>
                                 <exclude reference="X9j-NC-oHl"/>
                                 <exclude reference="btA-5e-ef3"/>
@@ -603,24 +707,6 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="iFI-gD-h5Z"/>
                                 <exclude reference="pTY-bl-nlh"/>
                                 <exclude reference="vbk-rh-TJZ"/>
-                                <exclude reference="1JI-VQ-NYm"/>
-                                <exclude reference="3aX-0h-9Fr"/>
-                                <exclude reference="9O7-gc-BHv"/>
-                                <exclude reference="D3o-IX-kTE"/>
-                                <exclude reference="DdN-3E-FLZ"/>
-                                <exclude reference="MRw-8T-zIz"/>
-                                <exclude reference="ZPc-gH-lAq"/>
-                                <exclude reference="bUy-sR-VhJ"/>
-                                <exclude reference="byW-gi-iBk"/>
-                                <exclude reference="dtU-aC-8dW"/>
-                                <exclude reference="fhf-ao-SxW"/>
-                                <exclude reference="gVu-IK-nj4"/>
-                                <exclude reference="gll-oV-g0e"/>
-                                <exclude reference="pRE-rM-bAa"/>
-                                <exclude reference="tS6-Pj-VKu"/>
-                                <exclude reference="tTk-ub-r7V"/>
-                                <exclude reference="xhs-ug-0Oz"/>
-                                <exclude reference="yjQ-oH-Vt6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -645,11 +731,6 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="ruH-P1-kaG"/>
                                 <exclude reference="xEN-MF-Quc"/>
                                 <exclude reference="yJe-KT-sqT"/>
-                                <exclude reference="1Uf-uQ-7dW"/>
-                                <include reference="KTt-sg-ECQ"/>
-                                <exclude reference="Yfb-Im-Kr7"/>
-                                <include reference="oUy-Xu-cku"/>
-                                <exclude reference="vCe-bJ-XNl"/>
                                 <include reference="32B-hK-Tfl"/>
                                 <include reference="6sa-vp-LKy"/>
                                 <include reference="IHg-l4-fQ8"/>
@@ -657,19 +738,30 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="abv-7H-bN5"/>
                                 <exclude reference="bdC-gk-CJO"/>
                                 <exclude reference="o2X-Pg-QaX"/>
+                                <exclude reference="1Uf-uQ-7dW"/>
+                                <include reference="KTt-sg-ECQ"/>
+                                <exclude reference="Yfb-Im-Kr7"/>
+                                <include reference="oUy-Xu-cku"/>
+                                <exclude reference="vCe-bJ-XNl"/>
                                 <exclude reference="DL5-za-fhs"/>
                                 <include reference="Hio-mI-QT8"/>
                                 <exclude reference="Usx-uQ-tyv"/>
                                 <exclude reference="sAt-dk-YXW"/>
                                 <include reference="xaT-gp-Kxc"/>
                                 <exclude reference="ysG-5C-1V3"/>
-                                <include reference="0zs-AR-ie4"/>
-                                <exclude reference="99m-oQ-zgL"/>
-                                <include reference="NNz-iR-ryP"/>
-                                <exclude reference="O96-fY-T2s"/>
-                                <exclude reference="adA-r3-FeT"/>
-                                <exclude reference="cbr-yt-aPY"/>
-                                <include reference="j3x-vQ-4M4"/>
+                                <exclude reference="9O7-gc-BHv"/>
+                                <include reference="D3o-IX-kTE"/>
+                                <exclude reference="DdN-3E-FLZ"/>
+                                <exclude reference="MRw-8T-zIz"/>
+                                <exclude reference="Qbx-v8-CX5"/>
+                                <exclude reference="ZPc-gH-lAq"/>
+                                <exclude reference="byW-gi-iBk"/>
+                                <exclude reference="dtU-aC-8dW"/>
+                                <exclude reference="fhf-ao-SxW"/>
+                                <exclude reference="gll-oV-g0e"/>
+                                <exclude reference="pRE-rM-bAa"/>
+                                <exclude reference="tTk-ub-r7V"/>
+                                <exclude reference="xhs-ug-0Oz"/>
                                 <include reference="9Je-Fc-Yjr"/>
                                 <exclude reference="LRF-T4-OGQ"/>
                                 <exclude reference="Mb6-fi-MIk"/>
@@ -679,6 +771,13 @@ Swipe Left or Right before time runs out !</string>
                                 <include reference="o37-cN-Vez"/>
                                 <exclude reference="ssl-JV-U9V"/>
                                 <include reference="vcK-MZ-8CR"/>
+                                <include reference="0zs-AR-ie4"/>
+                                <exclude reference="99m-oQ-zgL"/>
+                                <include reference="NNz-iR-ryP"/>
+                                <exclude reference="O96-fY-T2s"/>
+                                <exclude reference="adA-r3-FeT"/>
+                                <exclude reference="cbr-yt-aPY"/>
+                                <include reference="j3x-vQ-4M4"/>
                                 <include reference="2jd-kt-6lQ"/>
                                 <exclude reference="EGo-9I-5Jd"/>
                                 <exclude reference="GO8-u3-b5X"/>
@@ -701,19 +800,6 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="n2e-EN-fPM"/>
                                 <exclude reference="pTY-bl-nlh"/>
                                 <include reference="vbk-rh-TJZ"/>
-                                <exclude reference="9O7-gc-BHv"/>
-                                <include reference="D3o-IX-kTE"/>
-                                <exclude reference="DdN-3E-FLZ"/>
-                                <exclude reference="MRw-8T-zIz"/>
-                                <exclude reference="Qbx-v8-CX5"/>
-                                <exclude reference="ZPc-gH-lAq"/>
-                                <exclude reference="byW-gi-iBk"/>
-                                <exclude reference="dtU-aC-8dW"/>
-                                <exclude reference="fhf-ao-SxW"/>
-                                <exclude reference="gll-oV-g0e"/>
-                                <exclude reference="pRE-rM-bAa"/>
-                                <exclude reference="tTk-ub-r7V"/>
-                                <exclude reference="xhs-ug-0Oz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -729,20 +815,56 @@ Swipe Left or Right before time runs out !</string>
                                 <include reference="RZZ-Co-hcx"/>
                                 <exclude reference="iAq-77-TeQ"/>
                                 <exclude reference="pFa-AX-zba"/>
-                                <include reference="7FQ-H8-zDi"/>
-                                <include reference="Rdc-Ag-ZuV"/>
-                                <exclude reference="cbr-yt-aPY"/>
-                                <include reference="ku7-iS-Nbd"/>
-                                <include reference="Ra8-Xz-ddO"/>
-                                <include reference="yhn-Un-GRe"/>
-                                <exclude reference="GO8-u3-b5X"/>
-                                <include reference="btA-5e-ef3"/>
-                                <exclude reference="n2e-EN-fPM"/>
                                 <exclude reference="Qbx-v8-CX5"/>
                                 <include reference="bUy-sR-VhJ"/>
                                 <include reference="gVu-IK-nj4"/>
                                 <exclude reference="tS6-Pj-VKu"/>
                                 <exclude reference="yjQ-oH-Vt6"/>
+                                <include reference="Ra8-Xz-ddO"/>
+                                <include reference="yhn-Un-GRe"/>
+                                <include reference="7FQ-H8-zDi"/>
+                                <include reference="Rdc-Ag-ZuV"/>
+                                <exclude reference="cbr-yt-aPY"/>
+                                <include reference="ku7-iS-Nbd"/>
+                                <exclude reference="GO8-u3-b5X"/>
+                                <include reference="btA-5e-ef3"/>
+                                <exclude reference="n2e-EN-fPM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5VH-yP-e80"/>
+                                <include reference="kPd-BX-3lR"/>
+                                <include reference="spC-9y-fZ1"/>
+                                <include reference="BRv-l3-3bG"/>
+                                <exclude reference="Hio-mI-QT8"/>
+                                <include reference="4GF-57-AKn"/>
+                                <exclude reference="CT3-5M-R4z"/>
+                                <include reference="OjA-3K-1Z4"/>
+                                <exclude reference="WEF-nd-4Pe"/>
+                                <exclude reference="YSu-ku-iNh"/>
+                                <include reference="5vb-D4-9Wy"/>
+                                <exclude reference="I4K-BC-TgX"/>
+                                <include reference="MZI-Gq-bPG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="KMg-ef-of1"/>
+                                <include reference="Q2f-Qs-DUm"/>
+                                <include reference="iB6-h1-Toq"/>
+                                <exclude reference="iAq-77-TeQ"/>
+                                <include reference="mnX-lq-BWE"/>
+                                <include reference="Fw3-h8-kao"/>
+                                <include reference="nQV-rP-0F7"/>
+                                <exclude reference="Nbd-1q-GWk"/>
+                                <include reference="Sob-pg-K4o"/>
+                                <include reference="UFD-gd-Fp0"/>
+                                <exclude reference="UZg-A6-jaY"/>
+                                <include reference="J9i-FU-fYB"/>
+                                <exclude reference="GO8-u3-b5X"/>
+                                <include reference="MzE-zW-jIs"/>
+                                <exclude reference="n2e-EN-fPM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -753,12 +875,12 @@ Swipe Left or Right before time runs out !</string>
                                 <exclude reference="apV-29-8MJ"/>
                                 <exclude reference="hu2-ak-pDy"/>
                                 <include reference="nat-BQ-oWY"/>
+                                <exclude reference="1JI-VQ-NYm"/>
+                                <exclude reference="3aX-0h-9Fr"/>
                                 <exclude reference="Bu3-vy-gcc"/>
                                 <exclude reference="Nbd-1q-GWk"/>
                                 <exclude reference="QS5-Rs-REp"/>
                                 <exclude reference="UZg-A6-jaY"/>
-                                <exclude reference="1JI-VQ-NYm"/>
-                                <exclude reference="3aX-0h-9Fr"/>
                             </mask>
                         </variation>
                     </view>
@@ -781,7 +903,7 @@ Swipe Left or Right before time runs out !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.25" y="123.63281249999999"/>
+            <point key="canvasLocation" x="283.0985915492958" y="112.5"/>
         </scene>
     </scenes>
     <resources>
